@@ -1,0 +1,12 @@
+footer{
+    /* cho phần background là màu trắng */
+    background-color: white;
+    /* cho chiều cao của footer là 300px */
+    height: 300px;
+    /* căn giữa phần chữ ra giữa */
+    text-align: center;
+}
+.footer__content i{
+    /* cho phần tử font awsome khoảng cách lề trái phải 10px */
+    margin: 0px 10px;
+}

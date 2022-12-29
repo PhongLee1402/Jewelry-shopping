@@ -1,0 +1,106 @@
+
+/* HEADER */
+header{
+    max-height: 100%;
+}
+.header__top__right p{
+    /* kích cỡ chữ là 14px */
+    font-size: 14px;
+    /* sử dụng bootrap nên đưa thẻ p trở về mặc định  mg:0px */
+    margin-bottom: 0px;
+    /* cách lề trong là 10px */
+    padding: 0px 10px;
+    /* chiều cao cho phần header__top__right là 100% so với thẻ cha */
+    height: 100%;
+    /* nét chữ đậm  */
+    font-weight: bold;
+    }
+    .header__top__right input{
+        /* chỉnh thẻ input search phần border bên trái 1px mã màu #dedede */
+        border-left: 1px solid #dedede;
+    }
+    .Searching{
+        /* cho class là thẻ mẹ */
+        position: relative;
+        /* tắt border cho thẻ */
+        border: none;
+        /* kích cỡ chữ là 14px */
+        font-size: 14px;
+    }
+    .header__top__right select{
+        /* thuộc tính none để khi click phần out-line sẽ không hiện */
+    outline: none;
+    /* cách lề trong 8px */
+    padding: 8px;
+    /* tắt border cho phần select */
+    border: none;
+    }
+    .header__top__right form {
+        /* border bên trái cho thẻ form */
+    border-left: 1px solid #dedede;
+      /* border bên phải cho thẻ form */
+    border-right: 1px solid #dedede;
+    /* căn giữa những phần tử trong thẻ */
+    text-align: center;
+    /* căng lề trong hai bên trái phải 5px */
+    padding: 0px 5px;
+    /* cách lề ngoài trái 10px */
+    margin-left: 10px;
+        /* cách lề ngoài phải 10px */
+    margin-right: 10px;
+    }
+    header hr{
+        /* cho hr trở về thuộc tính mặc định do sử dụng bootrap */
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .header__midle__link i{
+        /* căn lề trong trái phải 10px */
+    padding: 0px 10px;
+    /* kích cỡ chữ 12px */
+    font-size: 12px;
+    }
+    .header__midle__logo img{
+        /* chiều rộng của img 169px */
+        width: 169px;
+        /* chiều cao của img 80px */
+        height: 80px;
+    }
+    .header__bottom nav li{
+        /* cho thẻ li thuộc tính inline */
+     display: inline;
+        /* loại bỏ dấu chấm ở thuộc tính li */
+     list-style: none;
+     /* căn lề trong trái phải 20px */
+     padding: 0px 20px;
+    }
+    .header__bottom nav ul{
+        /* cho thẻ ul trở về mặt định 0px */
+        margin-bottom: 0px;
+
+    }
+    .header__bottom nav li a{
+        /* cho màu của thẻ a là màu xám */
+        color:grey;
+        /* loại bỏ underline của thẻ a */
+        text-decoration: none;
+        /* cho tất cả thẻ a tất cả in hoa  */
+        text-transform: uppercase;
+    }
+    .header__bottom{
+        /* cho position thuộc tính sticky */
+        position: sticky;
+        /* top 0px left 0px  */
+        top: 0px;
+        left: 0px;
+        /* cho hình background là màu trắng */
+        background-color: white;
+    /* cho chiều rộng là 100% mục đích là khi cho position thì chiều rộng của thẻ sẽ bóp về đúng kích thước chứa content */
+        width: 100%;
+        /* cho điểm lớp của header__bottom là 9999 điểm */
+        z-index: 9999;
+        /* đặt bóng của header bottom là màu xám */
+        box-shadow: 0px 5px 4px 0px grey;
+    }
+    /* HEADER */
+    

@@ -1,0 +1,364 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+.section{
+    padding: 70px 0px;
+}
+
+.owl-carousel .owl-item img {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    object-fit: cover;
+}
+.list__menu__content .list__menu__item img{
+    /* cho chiều rộng của hình là 100%  so với thẻ cha*/
+    width: 100%;
+    /* chỉnh chiều cao của hình là 100% */
+    height: 100%;
+    /* sửa lại thuộc tính của hình là display block vì hình thuộc tính là inline */
+    display: block;
+    /* object fit cover để làm cho hình nét hơn */
+    object-fit: cover;
+    /* làm chậm khi thực hiện quá trình hover */
+    transition: all .5s;
+/* tạo bóng cho hình ảnh  */
+    box-shadow: 1px 1px 50px #dedede;
+    /* căn lề trong 10px */
+    padding: 10px;
+}
+.list__menu__content .list__menu__item img:hover{
+    /* khi hover vào hình thì hình bị zoom ra thêm 1.5 lần */
+    transform: scale(1.5);
+    /* khi hover xuất hiện con trỏ bàn tay */
+    cursor:grab;
+    /* tắt boxshadow sau khi hover */
+    box-shadow: none;
+}
+.list__menu__content{
+    /* chia các item thành display-grid */
+    display: grid;
+    /* chia thành 3 cột mỗi 1 cột 1 phần tử */
+    grid-template-columns: repeat(3,1fr);
+    /* căn giữa các phần tử con bên trong thẻ cha */
+    place-items: center;
+    /* khoảng cách giữa các lưới là 30px */
+    gap: 30px;
+}
+
+.list__menu__item:nth-child(1){
+    /* cho thẻ con thứ nhất hàng 1 chiếm 2 hàng */
+grid-row: 1/ span 2;
+}
+.list__menu__item{
+    /* tạo viền ngoài cho 1 thẻ div item */
+    border: 5px solid black;
+    /* căn lề trong 20px */
+    padding: 20px;
+    /* phủ bóng cho thẻ chứa hình */
+    box-shadow: 1px 1px 9px grey;
+}
+.text__overlay{
+    /* căn giữa các phần tử bên trong phần thẻ cha */
+    text-align: center;
+    /* căn lề ngoài bên trên 10px */
+    margin-top: 10px;
+}
+
+.list__menu__name__item img{
+    /* cho kích thước hình ảnh là 100% */
+    width: 100%;
+    /* chiều cao là 70% */
+    height: 70%;
+    /* cho hình sắc nét */
+    object-fit: cover;
+    /* định dạng hình thành display block */
+    display: block;
+    /* phủ bóng cho hình */
+    box-shadow: 1px 1px 9px grey;
+    /* căn lề trong 20px */
+    padding: 20px;
+    /* phần màu nền  */
+    background-color: rgba(212, 166, 178, 0.409);
+}
+
+.list__menu__name__content{
+    /* phần hiển thị lưới */
+    display: grid;
+    /* chia thành 4 cột */
+    grid-template-columns: repeat(4,1fr);
+    /* căn giữa các phần tử */
+    place-items: center;
+    /* khoảng cách giữa các lưới là 30px */
+    gap: 30px;
+}
+.list__menu__name__item{
+    /* tạo border cho nav item */
+    border: 1px solid black;
+    /* căn lề trong 20px */
+    padding: 20px;
+    /* cho màu nền là màu trắng */
+    background-color: white;
+    /* phủ bóng cho từng item */
+    box-shadow: 1px 1px 9px grey;
+    /* đặt cho item là phần tử mẹ */
+position: relative;
+/* khi over ra khỏi phạm vi thẻ div thì sẽ biến mất phần tử */
+overflow: hidden;
+}
+.text__overlay__menu{
+    /* đặt phần tử là thẻ con */
+    position: absolute;
+    /* đặt vị trí cho thẻ con theo mục đích khi hover */
+    bottom: 0px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+        /* cho chiều rộng là 100% */
+    width: 100%;
+
+}
+.text__overlay__menu p{
+    /* cho thẻ p trượt xuống nhằm out ra khỏi phạm vi thẻ div để biến mất */
+    transform: translateY(200px);
+    /* tạo độ chậm là 0.5s */
+    transition: all .5s;
+
+}
+.text__overlay__menu:hover p{
+    /* sau khi hover thì thẻ p sẽ trượt về vị trí mặc định và mang 1 số thuộc tính thêm vào */
+    transform: translateY(0px);
+    transition: all .5s;
+    width: 100%;
+    background-color: black;
+    color:white;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.title{
+    /* căn giữa các phần tử trong title */
+    text-align: center;
+}
+.title h2{
+    /* in đậm font chữ h2 */
+    font-weight: bold;
+    /* kích cỡ chữ là 40px */
+    font-size: 40px;
+}
+.introduction__shop__content{
+    /*  thêm background-image và chỉnh thuộc tính */
+    background-image: url(../Image/banner__04.jpg);
+    height: 600px;
+    /* bóp background vừa với thẻ cha */
+    background-size: cover;
+    /* cho vị trí hình ảnh là center là căn giữa */
+    background-position: center;
+    /* khi background được phóng lớn thì sẽ không tự lặp lại để cho đầy thẻ cha */
+    background-repeat: no-repeat;
+}
+.edit--bg .title{
+    /* cho thẻ chiều rộng 100% cao 100%  thêm background color*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.639);
+    /* căn lề trong là 230px để nó tự động căn giữa phần tử */
+    padding: 230px 0px;
+    font-weight: bold;
+    color:white;
+    /* khoảng cách theo chiều dọc của chữ 30px */
+    line-height: 30px;
+    /* khoảng cách giữa các chữ cái là 2px */
+    letter-spacing: 2px;
+}  
+.title p{
+    /* thêm background cho thẻ p là màu đen */
+background-color: black;
+} 
+.owl-carousel__02 img{
+    /* cho chiều rộng của phần owlcarousel là 100% height là 100% thuộc tính là display:block */
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.owl-carousel__02 .owl-item{
+    /* tạo border cho thẻ điv màu vàng */
+    border: 1px solid yellow;
+    position: relative;
+    /* cho thẻ điv là mẹ  */
+    overflow: hidden;
+    /* phần tử con nào ra khỏi phần tử mẹ sẽ bị ẩn đi */
+}
+.desc__event{
+    /* cho phần tử con là absolute */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    padding: 10px;
+    /* căn giữa các phần tử */
+    text-align: center;
+    /* chiều cao là 50px */
+    height: 50px;
+    line-height: 5px;
+    /* tạo border cho phần tử con */
+    border: 1px solid rgba(0, 0, 0, 0.635);
+    /* cho phần border về hình tròn */
+    border-radius: 50%;
+    /* phủ bóng cho phần border */
+    box-shadow: 1px 1px 9px grey;
+    background-color: red;
+        /* cho phần chữ là màu trắng */
+    color:rgba(255, 255, 255, 0.913);
+
+}
+.owl-carousel__02 .move__up{
+    /* cho phần văn bản là position absolute */
+    position: absolute;
+    /* chiều rộng là 100% chiều cao 100% */
+    width: 100%;
+    height: 100%;
+    /* vị trí của phần tử con so với phần tử cha  */
+    left: 0px;
+    top: 50%;
+    color:white;
+    /* căn lề trong là 20px */
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.84);
+    /* vị trí phần tử so với vị trí cố định là 200px theo trục Y */
+    transform: translateY(300px);
+    /* tạo độ chậm là 0.5s */
+    transition: all .5s;
+}
+.owl-carousel__02 .owl-item:hover .move__up{
+    transform: translateY(0);cho
+    /* sau khi được hover thì đoạn văn bản trở về vị trí ban đầu */
+}
+.owl-carousel__03 .owl-item .item{
+    background-color: black;
+    /* dàn các phần tử thành hàng dọc */
+    display: flex;
+    /* dàn hàng ngang cho các*/
+    flex-direction: column;
+} 
+.owl-carousel__03 .owl-item img{
+    /* cho hình trở thành hình tròn*/
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.feedback__item{
+    /* tạo phần background đen */
+    background-color:black;
+    /* chiều rộng là 100% chiều cao là 100% */
+    width: 100%;
+    height: 100%;
+    /* căn lề trong là 20px */
+    padding: 20px;
+}
+.text__feedback{
+    /* màu chữ là màu trắng */
+    color:white;
+    padding: 10px;
+    /* căn lề trong 10px */
+}
+.feedback__item{
+    /* căn giữa phần tử thẻ con so với thẻ cha  */
+    text-align: center;
+    display: flex;
+    /* dàn hàng ngang cho các phần tử con */
+    flex-direction: column;
+    /* dàn hàng dọc các phần tử sau đó căn giữa các phần tử */
+    place-items: center;
+}
+.info__items .title {
+    /* cách lề dưới 20px */
+ margin-bottom: 20px;
+}
+.info__item{
+     /* căn giữa các phần tử theo chiều ngang */
+    align-items: center;
+    /* căn giữa các phần tử theo chiều dọc thuộc tính sử dụng khi có display flex */
+    justify-content: center;
+    /* cho các phần tử chiếm 33,3% */
+    width: 33,3%;
+}
+.info__left img{
+    /* chỉnh kích thước của hình ảnh và phủ bóng cho hình */
+    width: 100px;
+    height: 50%;
+    display: block;
+    box-shadow: 1px 1px 9px grey;
+
+}
+.info__left{
+    /* chiều rộng của  bên trái chiếm một nửa  */
+    width: 50%;
+}
+.info__right{
+    /* chiều rộng của bên phải chiếm một nửa */
+    width: 50%;
+}
+.info__item{
+    /* căn lề trái phải 10px */
+    margin: 0px 10px;
+    
+}
+.info__items .title h2{
+    /* đổ màu cho thẻ h2 */
+    color:#7FCBC9;
+}
+.info__items .info__right p:nth-child(1),p:nth-child(3){
+    color:#7FCBC9;
+    /* đổ màu cho thẻ p ở vị trí số 1 và 3  */
+}
+.info__items .info__right p:nth-child(3) span{
+font-size: 12px;
+vertical-align: middle;
+/* chỉnh kích thước cho giá trị tiền tệ*/
+}
+.register__saleoff{
+    /* căn giữa các phần tử trong văn bản */
+    text-align: center;
+}
+.register__saleoffs{
+    /* tạo màu nền cho thẻ div */
+    background-color: #f5f5f7;
+    margin-top: 100px;
+    /* khoảng cách lề trên 100px */
+}
+.input__code{
+    /* dàn hàng ngang cho thẻ input và button */
+    display: flex;
+    justify-content: center;
+    /* căn giữa các phần tử  */
+}
+.input__code input{
+    width: 40%;
+    /* cho chiều rộng là 40px */
+    margin-right: 10px;
+    /* căn lề phải là 10px */
+    outline: none;
+    /* khi click vào thì phần outline sẽ không hiện */
+}
+.input__code button{
+    /* chỉnh màu sắc và kích thước cho nút button */
+    border: 1px solid black;
+    background-color: white(0, 0, 0);
+    color:grey;
+    outline: none;
+    font-weight: bold;
+}

@@ -1,0 +1,118 @@
+.link__page a:hover{
+    /* khi hover vào thẻ a thì sẽ không hiện dong underline */
+text-decoration: none;
+}
+.link__page p:hover{
+    cursor: pointer;
+    /* khi hover vào thẻ p sẽ hiện nút bàn tay con trỏ */
+}
+.blog__item img{
+    /* cho chiều rộng của img là 300px */
+    width: 300px;
+    /* căn lề trên, phải , dưới là 20px , trái 0px */
+    margin: 20px 20px 20px 0px;
+}
+.blog__item {
+    /* tạo phần viền cho item */
+    border-bottom: 1px dotted black;
+/* dàn hàng ngang cho item */
+    display: flex;
+    /* căn giữa các item  theo hàng ngang*/
+    align-items: center;
+}
+.title p{
+    /* cho phần nền p có màu trắng */
+    background-color:white;
+    margin-bottom:0px;
+}
+.blog__item .title h3{
+    /* cho màu của h3 có màu blue */
+    color:#7fcbc9;
+}
+.blog__item .title p{
+   /* cho màu của p có màu blue */
+    color:#7fcbc9;
+    font-size: 14px;
+}
+.blog__item .title{
+    /* căn phần tử chữ về bên trái */
+    text-align: left;
+}
+.blog__item .title span{
+    /* đặt màu cho thẻ span là black */
+    color:black;
+}
+.btns{
+    /* đặt màu cho button là màu trắng */
+    color:white;
+    /* cho độ đậm của chữ là màu in đậm */
+    font-weight: bold;
+    /* căng lề trong trên 15px dưới 30px trái phải 13px */
+    padding: 15px 30px 13px;
+    /* cho nền của button có màu như mã màu dưới */
+    background-color: #7fcbc9;
+    /* đặt độ chậm là 5s */
+    transition: all .5s ;
+    /* đặt viền là không */
+    border: none;
+    /* căn lề trên của button là 50px */
+    margin-top: 50px;
+}
+.btns:hover{
+    /* chọn màu nền của nút button sau khi hover là màu đen */
+    background-color: black;
+    color:white;
+}
+.list__content{
+    /* căn lề trên 160px */
+    margin-top: 160px;
+    /* căn lề trái 20px */
+    margin-left: 20px;
+    /* tạo khoảng cách giữa các thẻ 20px theo chiều dọc */
+    line-height: 40px;
+    /* tạo viền 1px dấu chấm màu đen */
+    border-bottom: 1px dotted black;
+ 
+}
+.list__content li{
+    list-style:circle;
+    /* chỉnh liststyle của li thành dấu tròn */
+}
+.list__content a{
+    color:#7fcbc9;
+    /* chỉnh màu của thẻ a như màu trên */
+}
+.list__content__tag a {
+    /* căn lề trên dưới 10px trái phải 5px */
+margin: 10px 5px;
+/* tạo viền dày 2px  */
+border: 2px solid #7fcbc9;
+ /*căn lề trong 1px  */
+padding: 1px;
+color:#7fcbc9;
+}
+.list__content__tag{
+    /* tạo khoảng cách giữa các thẻ tag theo chiều dọc 50px */
+line-height: 50px;
+/* tạo viền bottom cho thẻ kiểu chấm  */
+  border-bottom: 1px dotted black ;
+margin: 20px 0px;
+}
+.blog__desc h2{
+    color: #7fcbc9;
+}
+.blog__desc__item img{
+    /* đặt độ rộng tối đa hình là 30% */
+    max-width: 30%;
+    margin-right: 10px;
+    /* căn lề bên phải là 10px */
+}
+.blog__desc__item{
+    /* dàn hàng ngang */
+    display: flex;
+    /* căn giữa các phần tử theo chiều ngang */
+    align-items: center;
+    /* căn phần trên các phần tử 10px */
+    margin-top: 10px;
+    color: #7fcbc9;
+}

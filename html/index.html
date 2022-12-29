@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <!-- header -->
+
+    <header>
+        <!-- cho header__top thuộc tính container bóp phần content lại sau đó chia sang hai bên bằng display-flex 
+        cho căn giữa hai bên hoàn toàn và căn giữa các phần tử con trong class lớn bằng các thư viện đã add -->
+        <div class="header__top container-lg d-flex justify-content-between align-items-center">
+            <div class="header__top__left">
+                <!-- khối bên trái chứa thẻ i user -->
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <!-- khối bên phải chứa chia các phần tử con nằm trong phần tử cha -->
+            <div class="header__top__right d-flex align-items-center">
+                <!-- thẻ p chứa thông tin liên hệ và giờ làm việc trong tuần -->
+                <p >
+                    Gọi ngay : 1900 6750 - Hỗ trợ 7 ngày trong tuần từ 9h - 21h
+                </p>
+                <!-- thẻ chứa input -->
+                <input style="outline: none;" class="p-2 Searching" type="search" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- thẻ chứa phần chọn loại tiền được sử dụng  -->
+                <form action="POST">
+                    <select name="VND" id="VND">
+                        <option value="VND">VND</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <!-- khối thứ 2 của header cho khối thứ 3 bóp các phần tử content bên trong sau đó dàn các phần tử nằm ngang  và căn giữa các phần tử con bằng class bootrap-->
+        <div class="header__midle container-lg p-3 d-flex justify-content-between align-items-center">
+            <div style="width: 30%;" class="header__midle__link ">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <!-- khối chứa logo -->
+            <div class="header__midle__logo">
+                <img src="/Image/logo__main.png" alt="">
+            </div>
+            <!-- khối chứa túi shopping -->
+            <div style="width: 30%;"  class="header__midle__cart d-flex align-items-center justify-content-end">
+                <i style="margin-right: 10px; color:#337ab7; font-size: 30px;" class="fa-solid fa-bag-shopping"></i>
+                <span style="border:  1px solid #337ab7; border-radius: 10px; padding: 0px 10px; background-color: #337ab7;">
+                </span>
+            </div>
+        </div>
+    </header>
+    <!-- khối chứa phần cuối của header căn lề trong bằng class bootrap p-3 -->
+    <div  class="header__bottom p-3">
+        <!-- khối chứa thanh menu của header__bottom cho : bóp phần tử, căn các phần tử ra giữa so với thẻ cha , và dàn hàng ngang cho các phần tử con -->
+        <div class="header__bottom__content container-lg d-flex justify-content-center align-items-center">
+            <nav>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Sản Phẩm</a>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+        <!-- header -->
+        <!-- khối chứa carousel -->
+    <section class="CaROusel">
+        <!-- phần owl-carousel được sử dụng kèm sự hỗ trợ của thư viện jquery  -->
+        <div class=" owl-carousel__01 owl-carousel owl-theme ">
+            <div class="item">
+                <img src="/Image/banner__01.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="/Image/banner__02.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="/Image/banner__03.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="/Image/banner__04.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- phân tích phần menu sản phẩm -->
+    <section class="list__menu section">
+        <!-- khối chứa menu ép phần content bằng container-lg-->
+        <div class="list__menu__content container-lg">
+            <!-- khối chứa các item tiêu biểu-->
+            <div class="list__menu__item">
+                <img src="/Image/chains_1.png" alt="">
+                <div class="text__overlay">
+                    <p>
+                        Trang sức quý giá 
+                        sự tin tưởng tạo nên giá trị cốt lõi của món hàng
+                    </p>
+                    <p>2.000.000.đ</p>
+                </div>
+            </div>
+             <!-- khối chứa các item tiêu biểu-->
+            <div class="list__menu__item">
+                <img src="/Image/ring_04.png" alt="">
+                <div class="text__overlay">
+                    <p>
+                        Trang sức quý giá 
+                        sự tin tưởng tạo nên giá trị cốt lõi của món hàng
+                    </p>
+                    <p>2.000.000.đ</p>
+                </div>
+            </div>
+             <!-- khối chứa các item tiêu biểu-->
+            <div class="list__menu__item">
+                <img src="/Image/ring__9.png" alt="">
+                <div class="text__overlay">
+                    <p>
+                        Trang sức quý giá 
+                        sự tin tưởng tạo nên giá trị cốt lõi của món hàng
+                    </p>
+                    <p>2.000.000.đ</p>
+                </div>
+            </div>
+             <!-- khối chứa các item tiêu biểu-->
+            <div class="list__menu__item">
+                <img src="/Image/ring_5.png" alt="">
+                <div class="text__overlay">
+                    <p>
+                        Trang sức quý giá 
+                        sự tin tưởng tạo nên giá trị cốt lõi của món hàng
+                    </p>
+                    <p>2.000.000.đ</p>
+                </div>
+            </div>
+             <!-- khối chứa các item tiêu biểu-->
+            <div class="list__menu__item">
+                <img src="/Image/ring__8.png" alt="">
+                <div class="text__overlay">
+                    <p>
+                        Trang sức quý giá 
+                        sự tin tưởng tạo nên giá trị cốt lõi của món hàng
+                    </p>
+                    <p>2.000.000.đ</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- khối chứa menu -->
+    <section class="list__menu__name section">
+        <!-- phần title của phần menu -->
+        <div class="title section">
+            <h2>DANH MỤC SẢN PHẨM</h2>
+            <hr style="width:20%; margin: 0px auto;">
+        </div>
+        <!-- bóp lại phần content bằng container lg -->
+        <div class="list__menu__name__content container-lg">
+            <div class="list__menu__name__item">
+                <img src="/Image/p2.png" alt="">
+                <div class="text__overlay__menu">
+                    <p>
+                        Trâm Cài
+                    </p>
+                </div>
+            </div>
+            <div class="list__menu__name__item">
+                <img src="/Image/eardrop.png" alt="">
+                <div class="text__overlay__menu">
+                    <p>
+                        Bông Tai
+                    </p>
+                </div>
+            </div>
+            <div class="list__menu__name__item">
+                <img src="/Image/ring__12.png" alt="">
+                <div class="text__overlay__menu">
+                    <p>
+                     Nhẫn
+                    </p>
+                </div>
+            </div>
+            <div class="list__menu__name__item">
+                <img src="/Image/chains.png" alt="">
+                <div class="text__overlay__menu">
+                    <p>
+                       Dây Chuyền
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="title section">
+            <h2>HOT DEAL</h2>
+            <hr style="width:20%; margin: 0px auto;">
+        </div>
+        <div class="list__menu__name__content container-lg">
+                          <!-- khối chứa sản phẩm -->
+            <div class="list__menu__name__item">
+                <img src="/Image/ring__12.png" alt="">
+                <div class="text__overlay__menu">
+                    <p>
+                        Trâm Cài
+                    </p>
+                    <p>350.000$</p>
+                </div>
+            </div>
+                     <!-- khối chứa sản phẩm -->
+            <div class="list__menu__name__item">
+                <img src="/Image/ring__14.png" alt="">
+                <div class="text__overlay__menu">
+                    <p>
+                        Bông Tai
+                        
+                    </p>
+                    <p>350.000$</p>
+                </div>
+            </div>
+                     <!-- khối chứa sản phẩm -->
+            <div class="list__menu__name__item">
+                <img src="/Image/ring__15.png" alt="">
+                <div class="text__overlay__menu">
+                    <p>
+                     Nhẫn
+                     
+                    </p>
+                    <p>350.000$</p>
+                </div>
+            </div>
+                     <!-- khối chứa sản phẩm -->
+            <div class="list__menu__name__item">
+                <img src="/Image/ring" alt="">
+                <div class="text__overlay__menu">
+                    <p>
+                       Dây Chuyền
+                       
+                    </p>
+                    <p>350.000$</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- bóp phần content và áp dụng phần owlcarousel -->
+    <section class="introduction__shop section container-lg">
+        <div class="introduction__shop__content  edit--bg">
+            <div class="title">
+                <h2>
+                    Giới thiệu cửa hàng
+                </h2>
+                <hr style="width: 20%; margin: 0 auto;">
+                </p>
+                <p>
+                    CHÚNG TÔI CUNG CẤP BẠN CÁC HÀNG HÓA UNIQUE VỀ SẢN PHẨM CỦA CHÚNG TÔI LÀ BẢO QUẢN REAL.
+                    <br>
+                    Với kinh nghiệm 100 năm sản xuất trang sức thủ công, chúng tôi tin rằng bạn sẽ hài lòng với sản phẩm của chúng tôi. Giá cả phải chăng, mẫu mã đẹp mắt, màu sắc đa dạng, chúng tôi cam kết sẽ làm bạn hài lòng.
+                </p>
+                   
+            </div>
+        </div>
+        <!-- khối chứa phần tiêu đề -->
+        <div class="title section">
+            <h2>TIN TỨC KHUYẾN MÃI</h2>
+            <hr style="width: 20%; margin: 0 auto;" >
+        </div>
+        <!-- áp dụng phần owlcarousel cho phần introduction -->
+        <div class=" owl-carousel__02 owl-carousel owl-theme ">
+            <!-- khối chứa item cho hình -->
+            <div class="item">
+                <img src="/Image/model__1.jpg" alt="">
+                <p class="move__up">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum consequatur ullam maxime cupiditate asperiores quaerat exercitationem atque numquam, incidunt vitae vero aspernatur nobis perspiciatis excepturi ducimus nesciunt assumenda ab! 
+                    <a href="#" > Xem chi tiết</a>
+                </p>
+                <div class="desc__event">
+                    <p>
+                        MAR
+                    </p>
+                    <p>19</p>
+                </div>
+            </div>
+                   <!-- khối chứa item cho hình -->
+            <div class="item">
+                <img src="/Image/model__2.jfif" alt="">
+                <p class="move__up">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum consequatur ullam maxime cupiditate asperiores quaerat exercitationem atque numquam, incidunt vitae vero aspernatur nobis perspiciatis excepturi ducimus nesciunt assumenda ab! 
+                    <a href="#" > Xem chi tiết</a>
+                </p>
+                <div class="desc__event">
+                    <p>
+                        MAR
+                    </p>
+                    <p>19</p>
+                </div>
+            </div>
+                   <!-- khối chứa item cho hình -->
+            <div class="item">
+                <img src="/Image/model__3.jpg" alt="">
+                <p class="move__up">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum consequatur ullam maxime cupiditate asperiores quaerat exercitationem atque numquam, incidunt vitae vero aspernatur nobis perspiciatis excepturi ducimus nesciunt assumenda ab! 
+                    <a href="#" > Xem chi tiết</a>
+                </p>
+                <div class="desc__event">
+                    <p>
+                        MAR
+                    </p>
+                    <p>19</p>
+                </div>
+            </div>
+                   <!-- khối chứa item cho hình -->
+            <div class="item">
+                <img src="/Image/model__4.jpg" alt="">
+                <p class="move__up">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum consequatur ullam maxime cupiditate asperiores quaerat exercitationem atque numquam, incidunt vitae vero aspernatur nobis perspiciatis excepturi ducimus nesciunt assumenda ab!   
+                    <a href="#" > Xem chi tiết</a>    
+                </p>
+                <div class="desc__event">
+                    <p>
+                        MAR
+                    </p>
+                    <p>19</p>
+                </div>
+            </div>
+                   <!-- khối chứa item cho hình -->
+            <div class="item">
+                <img src="/Image/model__5.jfif" alt="">
+                <p class="move__up">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum consequatur ullam maxime cupiditate asperiores quaerat exercitationem atque numquam, incidunt vitae vero aspernatur nobis perspiciatis excepturi ducimus nesciunt assumenda ab!
+                    <a href="#" > Xem chi tiết</a>
+                </p>
+                <div class="desc__event">
+                    <p>
+                        MAR
+                    </p>
+                    <p>19</p>
+                </div>
+            </div>
+                   <!-- khối chứa item cho hình -->
+            <div class="item">
+                <img src="/Image/model__6.jpg" alt="">
+                <p class="move__up">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum consequatur ullam maxime cupiditate asperiores quaerat exercitationem atque numquam, incidunt vitae vero aspernatur nobis perspiciatis excepturi ducimus nesciunt assumenda ab!
+                    <a href="#" > Xem chi tiết</a>
+                </p>
+                <div class="desc__event">
+                    <p>
+                        MAR
+                    </p>
+                    <p>19</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback section">
+        <!-- bóp phần content dành cho các phần tử bên trong thẻ cha -->
+        <div class="feedback__content container-lg">
+            <!-- áp dụng owl-carousel dành cho phần feedback -->
+            <div class="owl-carousel__03 owl-carousel owl-theme">
+                <!-- khối chứa hình và phần chữ được ẩn sau khi hover thì hiển thị -->
+                <div class="item">
+                    <div class="feedback__item">
+                        <img src="/Image/portrait__01.jfif" alt="">
+                        <div class="text__feedback">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, fugiat deleniti. Rem, iure repellendus laboriosam autem consequatur perferendis impedit ipsum aliquid odit! Dolorum maxime, tempora rerum debitis nisi fuga aut.</p>
+                            <p>NGỌC TRINH</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="feedback__item">
+                        <img src="/Image/portrai__02.png" alt="">
+                        <div class="text__feedback">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, fugiat deleniti. Rem, iure repellendus laboriosam autem consequatur perferendis impedit ipsum aliquid odit! Dolorum maxime, tempora rerum debitis nisi fuga aut.</p>
+                            <p>NGỌC TRINH</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="feedback__item">
+                        <img src="/Image/portrait__03.png" alt="">
+                        <div class="text__feedback">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, fugiat deleniti. Rem, iure repellendus laboriosam autem consequatur perferendis impedit ipsum aliquid odit! Dolorum maxime, tempora rerum debitis nisi fuga aut.</p>
+                            <p>NGỌC TRINH</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="feedback__item">
+                        <img src="/Image/portrait__04.jpg" alt="">
+                        <div class="text__feedback">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, fugiat deleniti. Rem, iure repellendus laboriosam autem consequatur perferendis impedit ipsum aliquid odit! Dolorum maxime, tempora rerum debitis nisi fuga aut.</p>
+                            <p>NGỌC TRINH</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="feedback__item">
+                        <img src="/Image/portrait__05.jpg" alt="">
+                        <div class="text__feedback">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, fugiat deleniti. Rem, iure repellendus laboriosam autem consequatur perferendis impedit ipsum aliquid odit! Dolorum maxime, tempora rerum debitis nisi fuga aut.</p>
+                            <p>NGỌC TRINH</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- phần thông tin dành cho thông tin khuyến mãi và mới nhất những món hàng mới nhất -->
+    <section class="infomation section">
+        <!-- bóp content các phần tử và dàn hàng ngang các phần tử  -->
+        <div class="infomation__content container d-flex justify-content-between">
+            <div class="info__items">
+                <!-- khối chứa phần title -->
+                <div class="title">
+                    <h2>MỚI NHẤT</h2>
+                    <hr style="width: 20%; margin: 0 auto;">
+                </div>
+
+                <!-- khối chứa thông tin item cho khách hàng có thể xem và tham khảo những sản phẩm mới nhất -->
+                <div class="info__item
+                d-flex align-items-center ">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                    <p>
+                    Ring
+                    </p>
+                    <p>
+                        Nhẫn vòng ADV
+                    </p>
+                    <p>700.000 <span>$</span></p>
+                    </div>
+                </div>
+                <div class="info__item
+                d-flex align-items-center">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                        <p>
+                            Ring
+                            </p>
+                            <p>
+                                Bông Tai Cao Cấp Biz
+                            </p>
+                            <p>700.000 <span>$</span></p>
+                    </div>
+                </div>
+                <div class="info__item d-flex">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                        <p>
+                            Ring
+                            </p>
+                            <p>
+                               Nhẫn Ngọc Trai Cao Cấp
+                            </p>
+                            <p>700.000 <span>$</span></p>
+                </div>
+                </div>
+            </div>
+            <div class="info__items">
+                <div class="title">
+                    <h2>MỚI NHẤT</h2>
+                    <hr style="width: 20%; margin: 0 auto;">
+                </div>
+                <div class="info__item
+                d-flex align-items-center">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                        <p>
+                            Ring
+                            </p>
+                            <p>
+                                Bông Tai Cao Cấp Biz
+                            </p>
+                            <p>700.000 <span>$</span></p>
+                    </div>
+                </div>
+                <div class="info__item d-flex">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                        <p>
+                            Ring
+                            </p>
+                            <p>
+                                Bông Tai Cao Cấp Biz
+                            </p>
+                            <p>700.000 <span>$</span></p>
+                    </div>
+                </div>
+                <div class="info__item d-flex">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                        <p>
+                            Ring
+                            </p>
+                            <p>
+                                Bông Tai Cao Cấp Biz
+                            </p>
+                            <p>700.000$</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info__items">
+                <div class="title">
+                    <h2>MỚI NHẤT</h2>
+                    <hr style="width: 20%; margin: 0 auto;">
+                </div>
+                <div class="info__item d-flex">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                        <p>
+                            Ring
+                            </p>
+                            <p>
+                                ADV
+                            </p>
+                            <p>700.000 <span>$</span></p>
+                    </div>
+                </div>
+                <div class="info__item d-flex">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                        <p>
+                            Ring
+                            </p>
+                            <p>
+                                Bông Tai Cao Cấp Biz
+                            </p>
+                            <p>700.000$</p>
+                    </div>
+                </div>
+                <div class="info__item d-flex">
+                    <div class="info__left">
+                        <img src="/Image/jewelry.jfif" alt="">
+                    </div>
+                    <div class="info__right">
+                        <p>
+                            Ring
+                            </p>
+                            <p>
+                                Bông Tai Cao Cấp Biz
+                            </p>
+                            <p>700.000 <span>$</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- khối chứa thông tin đăng kí để nhận thông báo khuyến mãi -->
+        <div class="register__saleoffs section container">
+            <div class="register__saleoff">
+                <h3>ĐĂNG KÝ NHẬN KHUYẾN MÃI</h3>
+                <p>
+                    chúng tôi sẽ gửi thông tin các chương trình khuyến mãi dành cho bạn 
+                </p>
+                <!-- khối chứa thẻ input -->
+           <div class="input__code">
+            <input class="p-2" type="search" placeholder="Nhập Mail của bạn ngay tại đây    ...">
+            <button  class="btn p-2"> <a style="outline: none; text-decoration: none; color:black" href="mailto:sdfsfsdf@gmail.com" >ĐĂNG KÍ</a></button>
+        </div>
+           </div>
+        </div>
+    </section>
+    <hr>
+    <footer>
+        <div class="footer__content">
+            <!-- khối chứa logo cho footer -->
+            <div class="footer__logo">
+                <img style=" width: 169px; height: 80px;" src="/Image/logo__main.png" alt="">
+            </div>
+            <p>
+                Theme Trang sức là một theme bán hàng thân thiện với mobile. Với cơ chế tùy chỉnh hoàn hảo cho phép quý khách tùy chỉnh màu sắc, bố cục.
+            </p>
+            <!-- khối chứa thông tin nhãn hàng và cách liên hệ -->
+            <!-- cho thẻ p display inline -->
+            <i class="fa-solid fa-location-dot"></i><p style="display: inline;" >
+                Ladeco Building, 266 Doi Can Street, Hà Nội,
+            </p>
+            <i class="fa-solid fa-phone"></i> <a href="tel:0862261662">0862261662</a>
+            <i class="fa-solid fa-envelope"></i><a href="mailto:0308201069@caothang.edu.vn">0308201069@caothang.edu.vn</a>
+            <p>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-google"></i>
+            </p>
+            <p>
+                © Bản quyền thuộc về DQDT Team | Cung cấp bởi Sapo
+            </p>
+        </div>
+    </footer>
+
+
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script>
+ $(document).ready(function(){
+    $('.owl-carousel__01').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+    }
+});
+$('.owl-carousel__02').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        300:{
+            items:3
+        },
+    }
+});
+$('.owl-carousel__03').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:1
+        },
+
+    }
+});
+ });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
